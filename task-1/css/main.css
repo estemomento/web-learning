@@ -26,15 +26,119 @@
 	justify-content: space-between;
 }
 .body-left{
-	width: 480px;
+	width: 450px;
 }
 .body-right{
-	width: 480px;
+	width: 420px;
 }
 .people-text{
 	font-size: 20px;
     font-weight: bold;
     line-height: 30px;
     margin-top: 40px;
-    width: 450px;
+}
+.abre-cuenta{
+	font-size: 36px;
+	font-weight: bold;
+	margin: 25px 0 10px;
+}
+.gratis{
+	font-size: 19px;
+	margin-bottom: 15px;
+}
+.register{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 400px;
+	height: 400px;
+}
+.fullname{
+	display: flex;
+	justify-content: space-between;
+}
+.input-register{
+	text-indent: 5px;
+	font-size: 18px;
+	width: 400px;
+	height: 38px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+::placeholder{
+	color: #999
+}
+.input-basic{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 140px;
+}
+#name, #surname{
+	width: 48%;
+}
+.date{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+
+	height: 60px;
+}
+.form-text{
+	font-size: 18px;
+}
+.select-date{
+	width: 320px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+select{
+	width: 60px;
+	height: 30px;
+}
+.link-form{
+	display: inline;
+	font-size: 11px;
+	width: 130px;
+	color: #669;
+	text-decoration: none;
+}
+.link-form:hover{
+	text-decoration: underline;
+}
+.select-gender{
+	width: 180px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.condition{
+	width: 320px;
+	line-height: 13px;
+	font-size: 11px;
+	color: #777;
+}
+.submit{
+	background: linear-gradient(#5a5,#282);
+	border: 1px solid #030;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	width: 195px;
+	height: 40px;
+}
+.submit:hover{
+	background: linear-gradient(#7b7,#282);
+}
+.right-ad{
+	margin-top: 35px;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 16px;
+	color: #666;
+}
+#pagina{
+	font-size: 13px;
 }
