@@ -8,7 +8,20 @@
 <body>
 	<div class="head-wrapper">
 		<div class="header">
-		<img src="">
+			<div class="ico-sprite" id="logo"></div>
+			<form class="login">
+				<div class="login-name">
+					<label for="login-name">Correo electrónico o teléfono</label>
+					<input type="text" class="input-login" id="login-name">
+					<div style="height: 14px"></div>
+				</div>
+				<div class="login-pwd">
+					<label for="login-pwd">Contraseña</label>
+					<input type="text" class="input-login" id="login-pwd">
+					<a href="#" class="forgot">¿Olvidaste tu cuenta?</a>
+				</div>
+				<button class="init">Iniciar sesión</button>
+			</form>
 		</div>
 	</div>
 	<div class="body-wrapper">
@@ -22,105 +35,148 @@
 				<p class="gratis">Es gratis y lo será siempre.</p>
 				<form class="register">
 					<div class="input-basic">
-					<div class="fullname">
-						<input type="text" class="input-register" id="name" placeholder="Nombre">
-						<input type="text" class="input-register" id="surname" placeholder="Apellido">
-					</div>
-					<input type="text" class="input-register" id="cell" placeholder="Número de celular o correo electrónico">
-					<input type="text" class="input-register" id="pwd" placeholder="Contraseña nueva">
+						<div class="fullname">
+							<input type="text" class="input-register" id="name" placeholder="Nombre">
+							<input type="text" class="input-register" id="surname" placeholder="Apellido">
+						</div>
+						<input type="text" class="input-register" id="cell" placeholder="Número de celular o correo electrónico">
+						<input type="text" class="input-register" id="pwd" placeholder="Contraseña nueva">
 					</div>
 					<div class="date">
 						<p class="form-text">Fecha de nacimiento</p>
 						<div class="select-date">
 							<div class="date-wrapper">
-							<select id="day" title="Día">
-								<option value="0">Día</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
-								<option value="11">11</option>
-								<option value="12">12</option>
-								<option value="13">13</option>
-								<option value="14">14</option>
-								<option value="15">15</option>
-								<option value="16">16</option>
-								<option value="17">17</option>
-								<option value="18">18</option>
-								<option value="19">19</option>
-								<option value="20">20</option>
-								<option value="21">21</option>
-								<option value="22">22</option>
-								<option value="23">23</option>
-								<option value="24">24</option>
-								<option value="25">25</option>
-								<option value="26">26</option>
-								<option value="27">27</option>
-								<option value="28">28</option>
-								<option value="29">29</option>
-								<option value="30">30</option>
-								<option value="31">31</option>
-							</select><select id="month" title="Mes">
-								<option value="0">Mes</option>
-								<option value="1">ene</option>
-								<option value="2">feb</option>
-								<option value="3">mar</option>
-								<option value="4">abr</option>
-								<option value="5">may</option>
-								<option value="6">jun</option>
-								<option value="7">jul</option>
-								<option value="8">ago</option>
-								<option value="9">sep</option>
-								<option value="10">oct</option>
-								<option value="11">nov</option>
-								<option value="12">dic</option>
-							</select><select id="year" title="Año">
-								<option value="0">Año</option>
-								<option value="2017">2017</option>
-								<option value="2016">2016</option>
-								<option value="2015">2015</option>
-								<option value="2014">2014</option>
-								<option value="2013">2013</option>
-								<option value="2012">2012</option>
-								<option value="2011">2011</option>
-								<option value="2010">2010</option>
-								<option value="2009">2009</option>
-								<option value="2008">2008</option>
-								<option value="2007">2007</option>
-								<option value="2006">2006</option>
-								<option value="2005">2005</option>
-								<option value="2004">2004</option>
-								<option value="2003">2003</option>
-								<option value="2002">2002</option>
-								<option value="2001">2001</option>
-								<option value="2000">2000</option>
-								<option value="1999">1999</option>
-								<option value="1998">1998</option>
-								<option value="1997">1997</option>
-								<option value="1996">1996</option>
-							</select>
+								<select id="day" title="Día">
+									<option value="0">Día</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+									<option value="18">18</option>
+									<option value="19">19</option>
+									<option value="20">20</option>
+									<option value="21">21</option>
+									<option value="22">22</option>
+									<option value="23">23</option>
+									<option value="24">24</option>
+									<option value="25">25</option>
+									<option value="26">26</option>
+									<option value="27">27</option>
+									<option value="28">28</option>
+									<option value="29">29</option>
+									<option value="30">30</option>
+									<option value="31">31</option>
+								</select>
+								<select id="month" title="Mes">
+									<option value="0">Mes</option>
+									<option value="1">ene</option>
+									<option value="2">feb</option>
+									<option value="3">mar</option>
+									<option value="4">abr</option>
+									<option value="5">may</option>
+									<option value="6">jun</option>
+									<option value="7">jul</option>
+									<option value="8">ago</option>
+									<option value="9">sep</option>
+									<option value="10">oct</option>
+									<option value="11">nov</option>
+									<option value="12">dic</option>
+								</select>
+								<select id="year" title="Año">
+									<option value="0">Año</option>
+									<option value="2017">2017</option>
+									<option value="2016">2016</option>
+									<option value="2015">2015</option>
+									<option value="2014">2014</option>
+									<option value="2013">2013</option>
+									<option value="2012">2012</option>
+									<option value="2011">2011</option>
+									<option value="2010">2010</option>
+									<option value="2009">2009</option>
+									<option value="2008">2008</option>
+									<option value="2007">2007</option>
+									<option value="2006">2006</option>
+									<option value="2005">2005</option>
+									<option value="2004">2004</option>
+									<option value="2003">2003</option>
+									<option value="2002">2002</option>
+									<option value="2001">2001</option>
+									<option value="2000">2000</option>
+									<option value="1999">1999</option>
+									<option value="1998">1998</option>
+									<option value="1997">1997</option>
+									<option value="1996">1996</option>
+								</select>
 							</div>
 							<a class="link-form" href="#">¿Por qué tengo que proporcionar mi fecha de nacimiento?</a>
 						</div>
 					</div>
 					<div class="select-gender">
-					<input type="radio" name="sex" value="0"><label class="form-text">Mujer</label>
-					<input type="radio" name="sex" value="1"><label class="form-text">Hombre</label>
+						<input type="radio" name="sex" id="mujer" value="0"><label for="mujer" class="form-text">Mujer</label>
+						<input type="radio" name="sex" id="hombre" value="1"><label for="hombre" class="form-text">Hombre</label>
 					</div>
 					<p class="condition">Al hacer clic en "Abrir una cuenta", aceptas las <a class="link-form" href="#">Condiciones</a> y confirmas que leíste nuestra <a class="link-form" href="#">Política de datos</a>, incluido el <a class="link-form" href="#">uso de cookies</a>. Es posible que recibas notificaciones por SMS de Facebook, que puedes desactivar en cualquier momento.</p>
 					<button class="submit">Abrir una cuenta</button>
 				</form>
-
 				<p class="right-ad"><a class="link-form" id="pagina" href="#">Crea una página</a> para un personaje público, un grupo de música o un negocio.</p>
 			</div>
 		</div>
 	</div>
-	<div class="footer-wrapper"></div>
+	<div class="foot-wrapper">
+		<div class="foot">
+			<div class="lang">
+				<p style="color: #999">Español</p>
+				<a href="#">中文(简体)</a>
+				<a href="#">English (US)</a>
+				<a href="#">日本語</a>
+				<a href="#">한국어</a>
+				<a href="#">Français (France)</a>
+				<a href="#">Bahasa Indonesia</a>
+				<a href="#">Polski</a>
+				<a href="#">Português (Brasil)</a>
+				<a href="#">Deutsch</a>
+				<a href="#">Italiano</a>
+				<p style="width: 250px"></p>
+			</div>
+			<div class="gray-line"></div>
+			<div class="util">
+				<a href="#">Registrarte</a>
+				<a href="#">Iniciar sesión</a>
+				<a href="#">Celular</a>
+				<a href="#">Buscar amigos</a>
+				<a href="#">Páginas</a>
+				<a href="#">Ayuda</a>
+				<p style="width: 600px"></p>
+			</div>
+			<div class="gray-line"></div>
+			<div class="links-wrapper">
+				<div class="links"><a href="#">Messenger</a><a href="#">Instagram</a></div>
+				<div class="links"><a href="#">Facebook Lite</a><a href="#">Información</a></div>
+				<div class="links"><a href="#">Personas</a><a href="#">Crear anuncio</a></div>
+				<div class="links"><a href="#">Lugares</a><a href="#">Crear página</a></div>
+				<div class="links"><a href="#">Juegos</a><a href="#">Desarrolladores</a></div>
+				<div class="links"><a href="#">Ubicaciones</a><a href="#">Empleo</a></div>
+				<div class="links"><a href="#">Famosos</a><a href="#">Privacidad</a></div>
+				<div class="links"><a href="#">Mercado</a><a href="#">Cookies</a></div>
+				<div class="links"><a href="#">Grupos</a><a href="#">Opciones de anuncios</a></div>
+				<div class="links"><a href="#">Recetas</a><a href="#">Condiciones</a></div>
+				<div class="links"><a href="#">Moments</a><a href="#"></a></div>
+			</div>
+			<div class="copyright">Facebook © 2017</div>
+		</div>
+	</div>
 </body>
 </html>
