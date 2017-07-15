@@ -213,6 +213,7 @@ label:hover{
 	justify-content: space-around;
 }
 .lang{
+	width: 750px;
 	height: 20px;
 	display: flex;
 	justify-content: space-between;
@@ -223,6 +224,7 @@ label:hover{
 	line-height: 15px;
 }
 .util{
+	width: 400px;
 	height: 20px;
 	display: flex;
 	justify-content: space-between;
