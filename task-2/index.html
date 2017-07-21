@@ -5,37 +5,40 @@
   <title>Material Design</title>
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body>
-  <form action="#">
-    <h1>¡Regístrate!</h1>
+<body onload="fill()">
+  <form id="form" action="#">
+    <h1>Crear una cuenta</h1>
     <div class="fn-div">
       <input type="text" name="fn" id="fn" required><label class="fn-label" for="fn">Nombre</label>
     </div>
     <div class="ln-div">
-    <input type="text" name="ln" id="ln" required><label class="ln-label" for="ln">Apellido</label>
+      <input type="text" name="ln" id="ln" required><label class="ln-label" for="ln">Apellido</label>
     </div>
     <div class="gender">
-      <input type="radio" name="gender" id="mujer" value="0"><label for="mujer">Mujer</label>
-      <input type="radio" name="gender" id="hombre" value="1"><label for="hombre">Hombre</label>
+      <div class="mujer-div">
+        <input type="radio" name="gender" id="mujer" value="Mujer"><label for="mujer"><span class="outer-ring"></span><span class="inner-ring"></span>Mujer</label>
+      </div>
+      <div class="hombre-div">
+        <input type="radio" name="gender" id="hombre" value="Hombre"><label for="hombre"><span class="outer-ring"></span><span class="inner-ring"></span>Hombre</label>
+      </div>
     </div>
     <div class="place">
       <div class="estado-div">
-        <select>
-          <option>Estado</option>
-          <option>Estado</option>
-          <option>Estado</option>
+        <select id="state">
+          <option value="0">Estado</option>
         </select>
       </div>
       <div class="ciudad-div">
-        <select>
-          <option>Ciudad</option>
+        <select id="city">
+          <option value="0">Ciudad</option>
         </select>
       </div>
     </div>
     <div class="buttons">
-      <button id="reg" type="submit">INICIAR</button>
+      <button id="reg" type="submit" onclick="display ()">INICIAR</button>
       <button id="reset" type="reset">BORRAR</button>
     </div>
   </form>
+  <script src="js/main.js"></script>
 </body>
 </html>
