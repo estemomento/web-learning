@@ -52,7 +52,6 @@
 	width: 170px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
 }
 .login-name{
 	height: 64px;

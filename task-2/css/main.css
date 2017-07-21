@@ -1,0 +1,100 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  font-size: 14px;
+}
+html{
+  height: 100%;
+}
+body{
+  background: linear-gradient(#ddd,#bbb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+form{
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 1px 1px #666, 3px 3px 1px 1px #888, 5px 5px 2px 2px #aaa;
+  height: 640px;
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1{
+  font-size: 36px;
+  margin-top: 64px;
+}
+.gender, .place, .buttons{
+  text-align: center;
+  margin-top: 24px;
+  width: 384px;
+  height: 36px;
+}
+.fn-div, .ln-div{
+  margin-top: 24px;
+  width: 384px;
+  height: 36px;
+  position: relative;
+}
+.estado-div, .ciudad-div{
+  margin: 0 10px; 
+  display: inline-block;
+}
+input[type="text"]{
+  width: 384px;
+  height: 30px;
+  border: 0;
+  border-bottom: 1px #aaa solid;
+  outline: none;
+}
+input[type="text"]:focus{
+  border-bottom: 1px #000 solid;
+}
+.fn-label, .ln-label{
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  color: #aaa;
+  cursor: text;
+  transition: 0.2s;
+}
+input[type="text"]:focus + label, input[type="text"]:valid + label{
+  left: 0;
+  top: -5px;
+  font-size: 10px;
+}
+select{
+  width: 160px;
+  height: 30px;
+  border: 0;
+  border-bottom: 1px #aaa solid;
+  outline: none;
+  cursor: pointer;
+}
+select:focus{
+  background-color: #ddd;
+  border-bottom: 1px #000 solid;
+}
+.buttons{
+  margin: auto 0 64px;
+  display: flex;
+  justify-content: flex-end;
+}
+button{
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 2px;
+  border: 0;
+  outline: none;
+  background: none;
+}
+button:focus, button:hover{
+  background-color: #ddd;
+}
+button:active{
+  background-color: #bbb;
+}

@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Material Design</title>
+  <meta charset="UTF-8">
+  <title>Material Design</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	
+  <form action="#">
+    <h1>¡Regístrate!</h1>
+    <div class="fn-div">
+      <input type="text" name="fn" id="fn" required><label class="fn-label" for="fn">Nombre</label>
+    </div>
+    <div class="ln-div">
+    <input type="text" name="ln" id="ln" required><label class="ln-label" for="ln">Apellido</label>
+    </div>
+    <div class="gender">
+      <input type="radio" name="gender" id="mujer" value="0"><label for="mujer">Mujer</label>
+      <input type="radio" name="gender" id="hombre" value="1"><label for="hombre">Hombre</label>
+    </div>
+    <div class="place">
+      <div class="estado-div">
+        <select>
+          <option>Estado</option>
+          <option>Estado</option>
+          <option>Estado</option>
+        </select>
+      </div>
+      <div class="ciudad-div">
+        <select>
+          <option>Ciudad</option>
+        </select>
+      </div>
+    </div>
+    <div class="buttons">
+      <button id="reg" type="submit">INICIAR</button>
+      <button id="reset" type="reset">BORRAR</button>
+    </div>
+  </form>
 </body>
 </html>
