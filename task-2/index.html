@@ -7,36 +7,41 @@
 </head>
 <body onload="fill()">
   <form id="form" action="#">
-    <h1>Crear una cuenta</h1>
+    <h1>Create an account</h1>
     <div class="fn-div">
-      <input type="text" name="fn" id="fn" required><label class="fn-label" for="fn">Nombre</label>
+      <input type="text" name="fn" id="fn" required><label class="fn-label" for="fn">First Name</label>
     </div>
     <div class="ln-div">
-      <input type="text" name="ln" id="ln" required><label class="ln-label" for="ln">Apellido</label>
+      <input type="text" name="ln" id="ln" required><label class="ln-label" for="ln">Last Name</label>
     </div>
     <div class="gender">
-      <div class="mujer-div">
-        <input type="radio" name="gender" id="mujer" value="Mujer"><label for="mujer"><span class="outer-ring"></span><span class="inner-ring"></span>Mujer</label>
+      <div class="female-div">
+        <input type="radio" name="gender" id="female" value="Female"><label for="female"><span class="outer-ring"></span><span class="inner-ring"></span><span class="shadow"></span>Female</label>
       </div>
-      <div class="hombre-div">
-        <input type="radio" name="gender" id="hombre" value="Hombre"><label for="hombre"><span class="outer-ring"></span><span class="inner-ring"></span>Hombre</label>
+      <div class="male-div">
+        <input type="radio" name="gender" id="male" value="Male"><label for="male"><span class="outer-ring"></span><span class="inner-ring"></span><span class="shadow"></span>Male</label>
       </div>
     </div>
     <div class="place">
-      <div class="estado-div">
-        <select id="state">
-          <option value="0">Estado</option>
+      <div class="state-div">
+        <select id="state" name="state" onchange="getCity()">
+          <option value="0">State</option>
         </select>
       </div>
-      <div class="ciudad-div">
-        <select id="city">
-          <option value="0">Ciudad</option>
+      <div class="city-div">
+        <select id="city" name="city">
+          <option value="0">City</option>
         </select>
       </div>
     </div>
+    <div class="dialog">
+      <p id="p-name"></p>
+      <p id="p-gender"></p>
+      <p id="p-city"></p>
+    </div>
     <div class="buttons">
-      <button id="reg" type="submit" onclick="display ()">INICIAR</button>
-      <button id="reset" type="reset">BORRAR</button>
+      <button id="reg" type="submit">REGISTER</button>
+      <button id="reset" type="reset">RESET</button>
     </div>
   </form>
   <script src="js/main.js"></script>

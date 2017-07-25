@@ -42,7 +42,7 @@ h1{
   height: 36px;
   position: relative;
 }
-.estado-div, .ciudad-div{
+.state-div, .city-div{
   margin: 0 10px; 
   display: inline-block;
 }
@@ -69,7 +69,7 @@ input[type="text"]:focus + label, input[type="text"]:valid + label{
   top: -8px;
   font-size: 11px;
 }
-.mujer-div, .hombre-div{
+.male-div, .female-div{
   margin: 0 10px;
   display: flex;
   align-items: center;
@@ -81,6 +81,24 @@ input[type="radio"]{
   margin: 0 15px 0 5px;
   opacity: 0;
 }
+input[type="radio"] + label span{
+  cursor: pointer;
+}
+input[type="radio"] + label .shadow:hover, input[type="radio"] + label .inner-ring:hover + span, input[type="radio"] + label .outer-ring:hover + span + span{
+  cursor: pointer;
+  background-color: #aaa;
+}
+.shadow{
+  position: absolute;
+  left: -3px;
+  top: -8px;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 36px;
+  z-index: 0;
+}
 .outer-ring{
   position: absolute;
   left: 5px;
@@ -90,6 +108,7 @@ input[type="radio"]{
   height: 16px;
   border: 2px black solid;
   border-radius: 16px;
+  z-index: 1;
 }
 .inner-ring{
   position: absolute;
@@ -102,12 +121,13 @@ input[type="radio"]{
   border-radius: 5px;
   opacity: 0;
   transition: 0.2s;
+  z-index: 1;
 }
 input[type="radio"]:checked + label > .inner-ring{
   opacity: 1;
 }
 select{
-  width: 160px;
+  width: 180px;
   height: 30px;
   border: 0;
   border-bottom: 1px #aaa solid;
@@ -118,12 +138,28 @@ select:focus{
   background-color: #ddd;
   border-bottom: 1px #000 solid;
 }
+.dialog{
+  background-color: #007978;
+  border-radius: 2px;
+  box-shadow: 1px 1px #666, 3px 3px 1px 1px #888, 5px 5px 2px 2px #aaa;
+  margin-top: 24px;
+  height: 100px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dialog p{
+  margin-top: 10px;
+  color: #fff;
+}
 .buttons{
   margin: auto 0 64px;
-  
   justify-content: flex-end;
 }
 button{
+  font-family: "Roboto Medium";
+  font-weight: bolder;
   height: 36px;
   padding: 0 16px;
   border-radius: 2px;
