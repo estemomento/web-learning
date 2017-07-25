@@ -9,6 +9,7 @@ var cityData
 
 form.addEventListener('submit', function (e) {
   g = g[0].checked ? g[0] : g[1]
+  document.getElementById('dialog').style.opacity = 1
   document.getElementById('p-name').innerHTML = '<b>User:  </b>' + fn.value + ' ' + ln.value
   document.getElementById('p-gender').innerHTML = '<b>Gender:  </b>' + g.value
   document.getElementById('p-city').innerHTML = '<b>From: </b>' + c.options[c.selectedIndex].value + ', ' + s.options[s.selectedIndex].value
