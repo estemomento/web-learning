@@ -39,10 +39,9 @@ function getCity () {
     cityRequest.responseType = 'text'
     cityRequest.onload = function () {
       if (cityRequest.status === 200) {
-        cityData = cityRequest.responseText
-        cityData = JSON.parse('[' + cityData + ']')
+        cityData = JSON.parse(cityRequest.responseText)
         c.options.length = 0
-        cityData[0].forEach(function (o) {
+        cityData.forEach(function (o) {
           var x = document.createElement('option')
           x.text = o
           x.value = o
