@@ -7,13 +7,15 @@ function dayStringSpan (date1, date2) {
 }
 
 function countRepeat (arr) {
-  var result = [0]
-  for (var x in arr) Number.isInteger(result[arr[x]]) ? result[arr[x]]++ : result[arr[x]] = 1
+  let result = [0]
+  arr.forEach(function (element) {
+    Number.isInteger(result[element]) ? result[element]++ : result[element] = 1
+  }, this)
   return result
 }
 
 function camelCase (str) {
-  var camel = ''
+  let camel = ''
   for (var x = 0; x < str.split(/\W/).length; x++) {
     if (str.split(/\W/)[x].length !== 0) camel = camel.concat(str.split(/\W/)[x].toLowerCase()[0].toUpperCase(), str.split(/\W/)[x].toLowerCase().substr(1))
   }
@@ -21,21 +23,27 @@ function camelCase (str) {
 }
 
 function firstNonRepeat (str) {
-  for (var x in str) {
-    if (str.indexOf(str[x]) === str.lastIndexOf(str[x])) return str[x]
-  }
+  str.forEach(function (element) {
+    if (str.indexOf(element) === str.lastIndexOf(element)) return element
+  }, this)
 }
 
-var flattened = []
 function flatten (arr) {
-  for (var x in arr) Array.isArray(arr[x]) ? flatten(arr[x]) : flattened.push(arr[x])
+  const flattened = []
+  arr.forEach(function (element) {
+    Array.isArray(element) ? flattened.push(flatten(element)) : flattened.push(element)
+  }, this)
   return flattened
 }
 
 function nonUniqueElements (arr) {
-  var nonunique = []
-  for (var x in arr) {
-    if(arr.indexOf(arr[x]) !== arr.lastIndexOf(arr[x])) nonunique.push(arr[x])
-  }
+  const nonunique = []
+  arr.forEach(function (element) {
+    if (arr.indexOf(element) !== arr.lastIndexOf(element)) nonunique.push(element)
+  }, this)
   return nonunique
+}
+
+function display () {
+  document.write(flatten([1, 2, [3, [4]]]))
 }
